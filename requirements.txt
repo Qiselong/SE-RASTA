@@ -1,0 +1,25 @@
+"user" means both registered and unregistered
+"registered user" means (...)
+POIS are:
+	- regular (church, waterfall)
+	- facilities (restaurants, public transport, hostel...)
+	- created (photos, videos, segments, etc)
+	
+ 	USERS
+when on the app, the user shall be able to register/log in (theres 2 here)
+
+	TRAVEL PLANNER
+when using the TP, users shall be able to view the map and filter the pois
+when using the TP, registered users shall be able to plan a path, adding POIS, parameters (by car, etc.), dates, 
+when planning a trip, registered user shall be able to view informations about the path (distance, est. time, elevation, parkings, public transport, facilities, ...)
+when planning a trip registered user shall be able to save the trip: sending a mail with pdf being a report of the trip (map, hotels numbers, useful links, etc.) or a saved file in the app.
+On the day of your path, the weather system shall be able to send notifications to user that planned a trip in some part of the park.
+On the day of your trip, the system notifies the registered user that there is a lot of other users at POI you are supposed to reach
+when planning a trip, system tells a registered user that a selected POI will be visited a lot at that date, and suggest other days/places to visit 
+when using the TP, the user shall be able to access webpages/phones numbers of facilities
+
+	POI
+when at a regular POI, the user should be able to interact (NFC, QR, ..) with it a get information (text, videos,) from the app
+when on the app, the registered user shall be able to add created POI, add photographies, text
+when on the app, registered user shall be able to rate the POIs (what about facilities??)
+
