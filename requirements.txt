@@ -5,21 +5,44 @@ POIS are:
 	- facilities (restaurants, public transport, hostel...)
 	- created (photos, videos, segments, etc)
 	
- 	USERS
+ 	USERS management subsystem
 when on the app, the user shall be able to register/log in (theres 2 here)
 
 	TRAVEL PLANNER
 when using the TP, users shall be able to view the map and filter the pois
-when using the TP, registered users shall be able to plan a path, adding POIS, parameters (by car, etc.), dates, 
+when using the TP, registered users shall be able to plan a trip, adding POIS (to their travel), parameters (by car, etc.), dates, 
 when planning a trip, registered user shall be able to view informations about the path (distance, est. time, elevation, parkings, public transport, facilities, ...)
 when planning a trip registered user shall be able to save the trip: sending a mail with pdf being a report of the trip (map, hotels numbers, useful links, etc.) or a saved file in the app.
 On the day of your path, the weather system shall be able to send notifications to user that planned a trip in some part of the park.
 On the day of your trip, the system notifies the registered user that there is a lot of other users at POI you are supposed to reach
 when planning a trip, system tells a registered user that a selected POI will be visited a lot at that date, and suggest other days/places to visit 
-when using the TP, the user shall be able to access webpages/phones numbers of facilities
+when using the TP, the user shall be able to access webpages/phones numbers of facilities easily
+the travel planner shall be able build a trip given user parameters and wanted POIS
+The travel planner communicates with an API (OTP) to solve the travel problem.
 
 	POI
 when at a regular POI, the user should be able to interact (NFC, QR, ..) with it a get information (text, videos,) from the app
+when an user interact with a POI, the system register a track of the person being there.
 when on the app, the registered user shall be able to add created POI, add photographies, text
 when on the app, registered user shall be able to rate the POIs (what about facilities??)
 
+	ADMIN
+when a POI is created, the admin shall receive notification about it
+when an registered user upload a created POI, the administrator shall be able to check it before it is visible to other users, eventually, deleting the created POI
+Admin shall be able to edit anything (databases)
+Exterior actors can reach for the admin though a contact from
+The admin manages the databases content through a content management system (CMS)
+
+	SENSORS
+There are two types of sensors: NFC/QR at regular POI.
+When a user scan a QR Code, an information is send to the user tracking system
+when a user scan a QR code, the app displays information related to this code. 
+
+	Weather tS
+The weather TS is collecting every day data about temperature, rain, snow, etc. from a weater API and communicates it to the Notification system
+
+	Notification system
+A few days before the trip of users, the notification system sens a report about weather etc.
+
+	User tracking subsystem
+The datas collected in the tracking susbsytem is made anonym and is displayed in a dashboard on the main webstite "104 567 people visited this POI last year"
