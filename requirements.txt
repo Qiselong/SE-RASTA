@@ -21,7 +21,7 @@ the travel planner shall be able build a trip given user parameters and wanted P
 The travel planner communicates with an API (OTP) to solve the travel problem.
 
 	POI
-when at a regular POI, the user should be able to interact (NFC, QR, ..) with it a get information (text, videos,) from the app
+when at a regular POI, the user should be able to interact (NFC, QR, ..) with it a get information (audio guide) from the app.
 when an user interact with a POI, the system register a track of the person being there.
 when on the app, the registered user shall be able to add created POI, add photographies, text
 when on the app, registered user shall be able to rate the POIs (what about facilities??)
@@ -36,13 +36,21 @@ The admin manages the databases content through a content management system (CMS
 	SENSORS
 There are two types of sensors: NFC/QR at regular POI.
 When a user scan a QR Code, an information is send to the user tracking system
-when a user scan a QR code, the app displays information related to this code. 
+when a user scan a QR code, the app gives access to an audio guide. 
 
 	Weather tS
 The weather TS is collecting every day data about temperature, rain, snow, etc. from a weater API and communicates it to the Notification system
 
 	Notification system
 A few days before the trip of users, the notification system sens a report about weather etc.
+The day of the trip if an expected to be visited POI has been recording a lot of users, the notification subsystem sends the user a notification about it. 
 
 	User tracking subsystem
 The datas collected in the tracking susbsytem is made anonym and is displayed in a dashboard on the main webstite "104 567 people visited this POI last year"
+
+	SMR
+The SMR modifies the text of POIVIEW into one containint hyperlinks.
+
+app
+When on the app, the user can browse the list of Pois, a list where they see title/photo/short-description. 
+When on the browsing the list of POIS, clicking a regular POI give access to its POI-VIEW: a full page description of the POI. (videos, photos, text w/ hyperlinks etc.)

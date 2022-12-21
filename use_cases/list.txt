@@ -1,0 +1,9 @@
+list of use cases
+user management system (login/register)
+travel planner + recomendation ssystem
+QR code system / user tracking
+Notification ssystem
+new poi ssystem
+content management ssystem
+weather tracking ssystem
+web interface (dashboard, map of the park)
