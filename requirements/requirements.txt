@@ -44,6 +44,7 @@ The weather TS is collecting every day data about temperature, rain, snow, etc. 
 	Notification system
 A few days before the trip of users, the notification system sens a report about weather etc.
 The day of the trip if an expected to be visited POI has been recording a lot of users, the notification subsystem sends the user a notification about it. 
+At all time the Admin should be able to send the message to users by using Content Mnagment System(CMS)
 
 	User tracking subsystem
 The datas collected in the tracking susbsytem is made anonym and is displayed in a dashboard on the main webstite "104 567 people visited this POI last year"
