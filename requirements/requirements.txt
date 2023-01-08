@@ -18,9 +18,11 @@ POIS are:
 
 \textbf{Recommendation/Monitoring subsystem:}
 \begin{enumerate}
-	\item When browsing the POIs, users shall be able to view the map and filter the content.
+	\item When browsing the POIs, users shall be able to view the map and filter the content: filter by name, type, etc.
+	\item When browsing the POIs, users shall be able to see a dashboard of POIs sorted by different score system: most visited, best ratings, etc.
+	\item When browsing the POIs, users shall have access to a small description for each POI. (List of POIs)
+	\item When browsing the POIs, users shall be able to select a POI to have access to more details: pictures, extended description, etc. (POI View)
 \end{enumerate}
-
 
 \textbf{TRAVEL PLANNER:}
 \begin{enumerate}
@@ -32,50 +34,43 @@ POIS are:
 	\item The travel planner communicates with an API (OTP) to solve the travel problem.
 \end{enumerate}
 
-
 	POI
-	\begin{enumerate}
-when at a regular POI, the user should be able to interact (NFC, QR, ..) with it a get information (audio guide) from the app.
-when an user interact with a POI, the system register a track of the person being there.
-when on the app, the registered user shall be able to add created POI, add photographies, text
-when on the app, registered user shall be able to rate the POIs (what about facilities??)
+\begin{enumerate}
+	\item when at a regular POI, the user should be able to interact with a QR code and get information (audio guide) from it.
+	\item when a QR code is scanned, user shall have access to the extended POI view, where they can grade the POI. 
+	\item when a QR code is scanned, the corresponding POI "number of visitors" statistic is increased by 1.
+	\item when on the app, the registered user shall be able to add created POI, using photos, videos, etc.
+	\item when a POI is added, they appear as unverified in the corresponding database.
+	\item unverified POIs are visible only to the administrator. 
+\end{enumerate}
 
 	ADMIN
-	\begin{enumerate}
-when a POI is created, the admin shall receive notification about it
-when an registered user upload a created POI, the administrator shall be able to check it before it is visible to other users, eventually, deleting the created POI
-Admin shall be able to edit anything (databases)
-Exterior actors can reach for the admin though a contact from
-The admin manages the databases content through a content management system (CMS)
+\begin{enumerate}
+\item Admin shall be able to review the unverified POI and modify them into verified ones.
+\item Admin shall be able to edit the content of all databases through a content management system (CMS)
 
-	SENSORS
-	\begin{enumerate}
-There are two types of sensors: NFC/QR at regular POI.
-When a user scan a QR Code, an information is send to the user tracking system
-when a user scan a QR code, the app gives access to an audio guide. 
-
-	Weather tS
-	\begin{enumerate}
-The weather TS is collecting every day data about temperature, rain, snow, etc. from a weater API and communicates it to the Notification system
+\end{enumerate}
 
 	Notification system
-	\begin{enumerate}
-	
-On the day of your path, the weather system shall be able to send notifications to user that planned a trip in some part of the park.
-On the day of your trip, the system notifies the registered user that there is a lot of other users at POI you are supposed to reach
-A few days before the trip of users, the notification system sens a report about weather etc.
-The day of the trip if an expected to be visited POI has been recording a lot of users, the notification subsystem sends the user a notification about it. 
-At all time the Admin should be able to send the message to users by using Content Mnagment System(CMS)
-
-	User tracking subsystem
-	\begin{enumerate}
-The datas collected in the tracking susbsytem is made anonym and is displayed in a dashboard on the main webstite "104 567 people visited this POI last year"
+\begin{enumerate}
+	\item On the day of the trip of a user, the Notification subsystem shall be able to notify them about current weather conditions, downloading the informations through a weather API.
+	\item Admin shall be able to send messages to all users through notifications (some building not available for visiting, current unexpected event, etc.)
+\end{enumerate}
 
 	SMR
-	\begin{enumerate}
-The SMR modifies the text of POIVIEW into one containint hyperlinks.
-
-app
 \begin{enumerate}
-When on the app, the user can browse the list of Pois, a list where they see title/photo/short-description. 
-When on the browsing the list of POIS, clicking a regular POI give access to its POI-VIEW: a full page description of the POI. (videos, photos, text w/ hyperlinks etc.)
+	\item The SMR shall modify the text of POI view into one containing hyperlinks.
+\end{enumerate}
+
+	MODELS
+\begin{enumerate}
+	\item Trip model shall contain dates (starting, finish), a detailed route, as well as useful contact (phone n° of selected facilities, etc.)
+	\item A trip shall contain at least one POI 
+	\item A trip shall be associated to exactly one registered user.
+	\item User model shall contain a username, an email and phone contact, and list of it's trip. 
+	\item POI model shall contaon 
+\end{enumerate}
+	 
+
+
+
